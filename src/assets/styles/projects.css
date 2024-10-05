@@ -1,0 +1,22 @@
+
+#projects {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+.projects {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.desc {
+    margin-top: 10%;
+}
+
+h3 {
+    text-align: left;
+    margin-left: 300px;
+}
