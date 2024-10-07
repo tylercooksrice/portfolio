@@ -1,22 +1,32 @@
 
 #projects {
+    margin-top: .125%;
     display: grid;
-    grid-template-columns: auto auto;
-    gap: 10px;
-    padding: 10px;
+    grid-template-columns: 50% 50%;    
 }
 
 .projects {
-    padding: 20px;
-    font-size: 30px;
+    padding: 10px;
+    margin-left: 10%;
+    font-size: 20px;
     text-align: center;
+    height: auto;
+    width: auto;
 }
 
 .desc {
-    margin-top: 10%;
+    
+    position: relative;
+    margin-top: 6%;
+    margin-right: 15%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
 }
 
 h3 {
     text-align: left;
-    margin-left: 300px;
+    margin-left: 125px;
 }
