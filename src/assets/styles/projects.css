@@ -14,8 +14,7 @@
     width: auto;
 }
 
-.desc {
-    
+.desc1 {
     position: relative;
     margin-top: 6%;
     margin-right: 15%;
@@ -27,6 +26,12 @@ h2 {
 }
 
 h3 {
+    font-size: 20px;
     text-align: left;
     margin-left: 125px;
+}
+
+.desc2 {
+    margin-top: 6%;
+    margin-left: 20%;
 }
