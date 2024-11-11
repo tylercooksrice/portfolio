@@ -1,54 +1,138 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@font-face { 
+	font-family: Poppin; 
+	src: url('../public/fonts/Poppins/Poppins-Thin.ttf'); 
+	font-weight: normal;
+	font-style: normal;
+} 
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+	font-family: Poppin;
+    margin: 0;
+	padding: 0;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
+.grid {
+	display: grid;
+	min-block-size: 100vb;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(12, auto);
+	grid-row-gap: 2rem;
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+a {
+	text-decoration: none;
 }
 
-header nav ul li {
-    margin: 0 15px;
+.image {
+	inline-size: unset;
+	block-size: unset;
+	object-fit: cover;
+	object-position: top;
+	grid-column: 2 / 8;
+	grid-row: 4 / 6;
+	align-self: stretch;
+	justify-self: stretch;
+	place-self: stretch;
+	border-radius: 1rem;
 }
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
+.intro {
+	align-self: start;
+	grid-column: 6 / 9;
+	grid-row: 5;
+	background: hsl(260 20% 10% / 0.95);
+	padding-inline: 2rem;
+	padding-block: 2rem;
+	color: white;
+	border-radius: 1rem;
 }
 
-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 1000px;  
-    background-color: white;
-    border-radius: 8px;
+.text {
+	font-size: 2vb;
+	color: white;
+	grid-column: 5 / 9;
+	grid-row: 6 / 8;
+	align-self: start;
+	margin: 0;
+	padding-inline: 2rem;
+	padding-block: 2rem;
+	background: hsl(260 20% 10% / 0.95);
+	border-radius: 1rem;
 }
 
-h1 {
-    text-align: center;
+.icons {
+	grid-column: 1 / 3;
+	grid-row: 2 / 5;
+	justify-self: center;
+	align-self: end;
 }
 
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
-    margin-top: 20px;
+.icons_list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
 }
 
+.github {
+	justify-self: center;
+	inline-size: 4rem;
+	block-size: 4rem;
+	border-radius: 0.6rem;
+	display: block;
+}
+
+.linkedin {
+	justify-self: center;
+	inline-size: 5rem;
+	block-size: 5rem;
+	border-radius: 0.6rem;
+	display: block;
+}
+
+.gmail {
+	justify-self: center;
+	inline-size: 3rem;
+	block-size: 3rem;
+	border-radius: 0.6rem;
+	display: block;
+}
+
+.home {
+	font-size: 2vb;
+	margin: 0;
+	padding-inline: 2rem;
+	padding-block: 1.5rem;
+	grid-column: 9;
+	grid-row: 1/8;
+}
+
+.project {
+	font-size: 2vb;
+	margin: 0;
+	padding-inline: 2rem;
+	padding-block: 1.5rem;
+	grid-column: 10;
+	grid-row: 1/8;
+}
+
+.experience {
+	font-size: 2vb;
+	margin: 0;
+	padding-inline: 2rem;
+	padding-block: 1.5rem;
+	grid-column: 11;
+	grid-row: 1/8;
+}
+
+.contact {
+	font-size: 2vb;
+	margin: 0;
+	padding-inline: 1.5rem;
+	padding-block: 1.5rem;
+	grid-column: 12;
+	grid-row: 1/8;
+
+}

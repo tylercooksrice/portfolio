@@ -46,7 +46,6 @@ a {
 	color: hsl(0 0% 100%);
 	border-radius: 1rem;
 	background: hsl(260 20% 10% / 0.95);
-
 	grid-column: 5 / 9;
 	grid-row: 5 / 6;
 	align-self: end;
