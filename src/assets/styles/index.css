@@ -14,7 +14,7 @@ body {
 .grid {
 	display: grid;
 	min-block-size: 100vb;
-	grid-template-columns: repeat(12, 1fr);
+	grid-template-columns: repeat(11, 1fr);
 	grid-template-rows: repeat(12, auto);
 	grid-row-gap: 2rem;
 }
@@ -113,7 +113,7 @@ a {
 	font-size: 2vb;
 	margin: 0;
 	padding-inline: 2rem;
-	padding-block: 1.5rem;
+	padding-block: 1.5rem;	
 	grid-column: 10;
 	grid-row: 1/8;
 }
@@ -134,5 +134,32 @@ a {
 	padding-block: 1.5rem;
 	grid-column: 12;
 	grid-row: 1/8;
+}
 
+.diagram {
+	background: hsl(260 20% 10% / 0.95);
+	grid-column: 10/12;
+	grid-row: 4/8;
+	color: white;
+	border-radius: 1rem;
+	padding-inline: 2rem;
+	padding-block: 1.5rem;
+}
+
+footer {
+	color: white;
+	background: hsl(260 20% 10% / 0.95);
+    padding: 1rem; 
+}
+
+.grid-container {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.grid-container > * {
+	text-align: center;
+	margin: 10px;
+	display: flex;
+	flex-wrap: nowrap;
 }

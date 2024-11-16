@@ -1,37 +1,47 @@
+@font-face { 
+	font-family: Poppin; 
+	src: url('../public/fonts/Poppins/Poppins-Thin.ttf'); 
+	font-weight: normal;
+	font-style: normal;
+} 
 
-#projects {
-    margin-top: .125%;
+body {
+	font-family: Poppin;
+    margin: 0;
+	padding: 0;
+}
+
+.grid {
+	display: grid;
+	min-block-size: 100vb;
+	grid-template-columns: repeat(11, 1fr);
+	grid-template-rows: repeat(12, auto);
+	grid-row-gap: 2rem;
+}
+
+header {
+    grid-column: 1 / -1; 
+    grid-row: 1;
     display: grid;
-    grid-template-columns: 50% 50%;    
+    justify-content: space-between;
 }
 
-.projects {
-    padding: 10px;
-    margin-left: 10%;
-    font-size: 20px;
-    text-align: center;
-    height: auto;
-    width: auto;
+header > h1{
+    font-size: 5vb;
+    padding-inline: 1.5rem;
 }
 
-.desc1 {
-    position: relative;
-    margin-top: 6%;
-    margin-right: 15%;
+.image {
+    grid-column: 11;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    height: 0;
+    margin-top: 1rem;
+    justify-self: end;
+    width: 20%;
 }
 
-h2 {
-    text-align: center;
-    font-size: 30px;
-}
-
-h3 {
-    font-size: 20px;
-    text-align: left;
-    margin-left: 125px;
-}
-
-.desc2 {
-    margin-top: 6%;
-    margin-left: 20%;
+.image > img {
+    width: 70%;
 }
