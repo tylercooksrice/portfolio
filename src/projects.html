@@ -5,128 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="assets/styles/projects.css">
+    <link rel="stylesheet" href="assets/styles/universal.css">
     <script src="assets/scripts/projects.js"></script>
 </head>
 <body>
-    <div class="grid">
-        <header>
-            <h1>My Project Portfolio</h1>
-            <button type="button" class="image">
-                <img src="public/images/navigation.png" alt="navigation" />
-            </button>
-        </header>
-        
-        <div class="EDS124BR">
-
-        </div>
+    <header>
+        <h1>My Project Portfolio</h1>
+        <button type="button" id="menuButton">
+            <img src="public/images/navigation.png" alt="navigation" />
+        </button>
+    </header>
+    <div class="menu" id="menu">
+        <ul class="element"><a href="index.html">About Me</a></ul>
+        <ul class="element"><a href="projects.html">Projects</a></ul>
+        <ul class="element"><a href="experiences.html">Experiences</a></ul>
+        <ul class="element"><a href="contact.html">Contact Me</a></ul>
     </div>
-    
-    <h2>Projects</h2>
-    <div id="projects">  
-        <div class="projects">
-            <h3>Sequencing Week 1</h3> 
+    <div id="grid">
+        <div class="projects1">
+            <h2>Sequencing Week 1: Sprite House Drawing</h2>   
             <video width="700px" height="400px" controls>
                 <source src="public/videos/alonzoHouse.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-        </div>
-        <div class="desc1">
-            <p>In this short demonstration, this video project shows Sprite drawing a house using snap. Using some block instructions, Sprite draws a house with a few turns and movement block commands</p>
-        </div>
-
-        <div class="desc2">
-            <h3>Sequencing Week 2: Loop Explanation</h3> 
-            <p>In this short demonstration, this video project shows Sprite moving according to the parameters of loops. Using some loop instructions, the sprites either move in a circle, move foward 300 
-                steps or spin in a circle.
-            </p>
-        </div>
-        <div class="projects">
-            <video width="700px" height="400px" controls>
-                <source src="public/videos/repeats.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-
-        <div class="projects">
-            <h3>Sequencing Week 2: Breakdancer</h3> 
-            <video width="700px" height="400px" controls>
-                <source src="public/videos/breakdancer.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="desc1">
-            <p>In this short demonstration, this video project shows a breakdancer doing tricks from the loops, while changing costumes to make the sprite breakdancer loop more realistic.</p>
-        </div>
-
-        <div class="desc2">
-            <h3>Nested Loops Week 3: Octagon Drawing</h3> 
-            <p>In this short demonstration, this video project shows a mouse drawing an octagon using a repeat loop eight times to draw the octagon as an octagon shape needs eight sides and angles 
-                to be an octagon.
-            </p>
-        </div>
-        <div class="projects">
-            <video width="700px" height="400px" controls>
-                <source src="public/videos/octagon.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-
-        <div class="projects">
-            <h3>Events Week 3: Monkey Banana</h3> 
-            <video width="700px" height="400px" controls>
-                <source src="public/videos/banana.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="desc1">
-            <p>In this short demonstration, this video project shows a monkey catching bananas with the use of arrowkeys by the user. When the banana is caught before touching the green grass,
-                the monkey will say Yum, if the monkey fails to catch a banana, the monkey will say Noo I missed a banana!
+            <p>In this short demonstration, this video project shows Sprite drawing a house using snap. Using some block instructions,
+                 Sprite draws a house with a few turns and movement block commands
             </p>
         </div>
 
-        <div class="desc2">
-            <h3>Nested Loops Week 4: Shapes Drawing</h3> 
-            <p>In this short desmonstration, we have the sprite draw three different shapes with the usage of variable manipulation. With the variables increasing each iteration, the side 
-                length is increased and the number of sides is also increased.
-            </p>
-        </div>
-        <div class="projects">
+        <div class="projects2">
+            <h2>Sequencing Week 2: Loop Explanation</h2>
             <video width="700px" height="400px" controls>
-                <source src="public/videos/squares.mp4" type="video/mp4">
+                <source src="public/videos/alonzoHouse.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-        </div>
-
-        <div class="projects">
-            <h3>Events Week 5: Soccer Ball</h3> 
-            <video width="700px" height="400px" controls>
-                <source src="public/videos/soccer.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="desc1">
-            <p>In this short demonstration, this video project shows the usage of a conditonal loop. The ball will continue to bounce back and forth at a random value until the conditional loop
-                of the mouse touching the soccer ball is satisfied. 
-            </p>
-        </div>        
-
-        <div class="desc2">
-            <h3>Nested Loops Week 6: Short Game</h3> 
-            <p>In this short desmonstration, we have this short game that gives us different point values depending on when we clicked on the ball and it's location. Using if else statements, the game's main
-                compoments involve giving you 50 points when clicking on green, 25 points when on yellow, and negative 25 points on red.
+            <p>
+                In this short demonstration, this video project shows Sprite moving according to the parameters of loops. Using some loop instructions, 
+                the sprites either move in a circle, move foward 300 steps or spin in a circle.
             </p>
         </div>
-        <div class="projects">
-            <video width="700px" height="400px" controls>
-                <source src="public/videos/SaucerGame.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        
     </div>
 
     <footer>
-        <p></p>
+        <div class="grid-container">
+            <div>Main</div>
+            <div>Projects</div>
+            <div>Contact</div>
+        </div>
+        <p>All rights reserved.</p>
     </footer>
 </body>
 </html>

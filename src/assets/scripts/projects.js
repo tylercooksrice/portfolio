@@ -1,10 +1,24 @@
-document.querySelector('.toggle-button').addEventListener('click', function() {
-    const content = document.querySelector('.content');
-    content.classList.toggle('show');
-    
-    if(content.classList.contains('show')) {
-        this.textContent = "Show Less"; /* Change button text when content is visible */
-    } else {
-        this.textContent = "Show More"; /* Change button text when content is hidden */
-    }
-});
+window.addEventListener("DOMContentLoaded", init);
+
+function init() {
+    const grid = document.getElementById("grid");
+    const menu  = document.getElementById("menu");
+    const button = document.getElementById("menuButton");
+    let visible = false;
+
+    button.addEventListener("click", () => {
+        if(visible == false) { // display the menu
+            grid.style.display = "none";
+            menu.style.display = "flex";
+            visible = !visible;
+
+        } else {
+            grid.style.display = "grid";
+            menu.style.display = "none";
+            visible = !visible; 
+
+        }
+
+        console.log("eeeee")
+      });
+}

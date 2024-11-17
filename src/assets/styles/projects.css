@@ -1,17 +1,11 @@
-@font-face { 
-	font-family: Poppin; 
-	src: url('../public/fonts/Poppins/Poppins-Thin.ttf'); 
-	font-weight: normal;
-	font-style: normal;
-} 
-
-body {
-	font-family: Poppin;
-    margin: 0;
-	padding: 0;
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Return to original position */
+    }
 }
 
-.grid {
+#grid {
 	display: grid;
 	min-block-size: 100vb;
 	grid-template-columns: repeat(11, 1fr);
@@ -20,18 +14,18 @@ body {
 }
 
 header {
-    grid-column: 1 / -1; 
-    grid-row: 1;
     display: grid;
-    justify-content: space-between;
 }
 
 header > h1{
     font-size: 5vb;
     padding-inline: 1.5rem;
+    opacity: 0;
+    transform: translateY(-50px); /* Slight vertical shift */
+    animation: fadeInUp 1s ease-out forwards;
 }
 
-.image {
+#menuButton {
     grid-column: 11;
     border: none;
     cursor: pointer;
@@ -42,6 +36,66 @@ header > h1{
     width: 20%;
 }
 
-.image > img {
-    width: 70%;
+#menuButton > img {
+    width: 60%;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    font-size: 4vb;
+    background: hsl(260 20% 10% / 0.95);
+    margin: 1%;
+    padding-block: 15vb;
+    transform: translateY(-50px); /* Slight vertical shift */
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: wheat;
+  }
+
+h2 {
+    text-wrap: nowrap;
+}
+
+.projects1 {
+    grid-row: 1;
+    grid-column: 2 / -2; 
+    display: grid;
+    grid-template-columns: repeat(10, 0.5fr); /* Adjust the number of columns if needed */
+    grid-template-rows: repeat(2, 0.25fr);
+}
+
+.projects1 > video {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.projects1 > p {
+    grid-column: 3/10;
+    grid-row: 2;
+}
+
+.projects2 {
+    grid-row: 4;
+    grid-column: 2 / -2; 
+    display: grid;
+    grid-template-columns: repeat(10, 0.5fr); /* Adjust the number of columns if needed */
+    grid-template-rows: repeat(2, 0.25fr);
+}
+
+.projects2 > video {
+    grid-column: 9;
+    grid-row: 2;
+    justify-self: end;
+}
+
+.projects2 > p {
+    grid-column: 1/8;
+    grid-row: 2;
 }

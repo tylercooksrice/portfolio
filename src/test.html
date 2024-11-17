@@ -1,17 +1,15 @@
 <link rel="stylesheet" href="assets/styles/test.css">
-<div class="grid">
-	<img width="722" height="406" src="https://assets.codepen.io/47791/zoranjambor-cssweekly-youtube.jpg" alt="" class="image" />
-	<h1 class="headline">CSS Weekly on YouTube</h1>
-	<p class="text">
-		Visit CSS Weekly's YouTube channel and learn how to create precisely this creative layout using CSS Grid.
-		<br>
-		<a href="https://youtube.com/@cssweekly" class="btn">Find Out More</a>
-	</p>
-	<aside class="social-icons">
-		<ul class="social-icons__list">
-			<li><a target="_blank" href="https://youtube.com/@cssweekly"><img class="social-icons__img" src="https://assets.codepen.io/47791/youtube-square.svg" alt="YouTube" /></a></li>
-			<li><a target="_blank" href="https://twitter.com/cssweekly"><img class="social-icons__img" src="https://assets.codepen.io/47791/twitter-square.svg" alt="Twitter" /></a></li>
-			<li><a target="_blank" href="https://instagram.com/cssweekly"><img class="social-icons__img" src="https://assets.codepen.io/47791/instagram-square.svg" alt="Instagram" /></a></li>
-		</ul>
-	</aside>
+
+<div class="click-toggle">
+    <button class="toggle-button">Show/Hide Element</button>
+    <div class="toggle-content">
+        <p>This is the content that appears/disappears.</p>
+    </div>
 </div>
+
+<script>
+    document.querySelector('.toggle-button').addEventListener('click', function() {
+    const content = document.querySelector('.toggle-content');
+    content.classList.toggle('show'); /* Toggle the visibility */
+    });
+</script>
