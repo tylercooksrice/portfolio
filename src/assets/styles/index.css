@@ -1,3 +1,25 @@
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* Matches the width of the text */
+    }
+}
+
+@keyframes blink {
+    50% {
+        background-color: transparent;
+    }
+}
+
 .grid {
 	display: grid;
 	min-block-size: 100vb;
@@ -20,6 +42,7 @@
 }
 
 .intro {
+	margin-block: 10%;
 	align-self: start;
 	grid-column: 6 / 9;
 	grid-row: 5;
@@ -28,6 +51,15 @@
 	padding-block: 2rem;
 	color: white;
 	border-radius: 1rem;
+}
+
+.intro > h1 {
+	margin: 0;
+    border-right: 2px solid transparent; /* To align with the cursor */
+    overflow: hidden;
+	width: 100%;
+	max-width: 35ch;
+	animation: typing 4s steps(25, end), blink 0.6s step-end infinite;
 }
 
 .text {
@@ -65,6 +97,10 @@
 	block-size: 4rem;
 	border-radius: 0.6rem;
 	display: block;
+	opacity: 0;
+	transform: translateX(-50px);
+    animation: fadeInUp 1s ease-out forwards;
+	animation-delay: 4.5s;
 }
 
 .linkedin {
@@ -73,6 +109,10 @@
 	block-size: 5rem;
 	border-radius: 0.6rem;
 	display: block;
+	opacity: 0;
+	transform: translateX(-50px);
+    animation: fadeInUp 1s ease-out forwards;
+	animation-delay: 5s;
 }
 
 .gmail {
@@ -81,6 +121,10 @@
 	block-size: 3rem;
 	border-radius: 0.6rem;
 	display: block;
+	opacity: 0;
+	transform: translateX(-50px);
+    animation: fadeInUp 1s ease-out forwards;
+	animation-delay: 5.5s;
 }
 
 .home {
@@ -128,3 +172,11 @@
 	padding-inline: 2rem;
 	padding-block: 1.5rem;
 }
+
+.grid-container > a { 
+	color: white;	
+}
+
+a:hover {
+    color: wheat;
+  }
