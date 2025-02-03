@@ -24,7 +24,7 @@
 	display: grid;
 	min-block-size: 100vb;
 	grid-template-columns: repeat(11, 1fr);
-	grid-template-rows: repeat(12, auto);
+	grid-template-rows: repeat(9, auto);
 	grid-row-gap: 2rem;
 }
 
@@ -34,7 +34,7 @@
 	object-fit: cover;
 	object-position: top;
 	grid-column: 2 / 8;
-	grid-row: 4 / 6;
+	grid-row: 2 / 4;
 	align-self: stretch;
 	justify-self: stretch;
 	place-self: stretch;
@@ -45,7 +45,7 @@
 	margin-block: 10%;
 	align-self: start;
 	grid-column: 6 / 9;
-	grid-row: 5;
+	grid-row: 3;
 	background: hsl(260 20% 10% / 0.95);
 	padding-inline: 2rem;
 	padding-block: 2rem;
@@ -59,14 +59,14 @@
     	overflow: hidden;
 	width: 100%;
 	max-width: 35ch;
-	animation: typing 4s steps(25, end), blink 0.6s step-end infinite;
+	animation: typing 4s steps(35, end), blink 0.6s step-end infinite;
 }
 
-.text {
+summary {
 	font-size: 2vb;
 	color: white;
 	grid-column: 5 / 9;
-	grid-row: 6 / 8;
+	grid-row: 5 / 7;
 	align-self: start;
 	margin: 0;
 	padding-inline: 2rem;
@@ -127,41 +127,21 @@
 	animation-delay: 5.5s;
 }
 
-.home {
-	font-size: 2vb;
+hgroup {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 	margin: 0;
-	padding-inline: 2rem;
-	padding-block: 1.5rem;
-	grid-column: 9;
-	grid-row: 1/8;
+	grid-column: 8/12;
+	grid-row: 0;
 }
 
-.project {
-	font-size: 2vb;
-	margin: 0;
-	padding-inline: 2rem;
-	padding-block: 1.5rem;	
-	grid-column: 10;
-	grid-row: 1/8;
-}
-
-.experience {
-	font-size: 2vb;
-	margin: 0;
-	padding-inline: 2rem;
-	padding-block: 1.5rem;
-	grid-column: 11;
-	grid-row: 1/8;
-}
-
-.contact {
+hgroup > * {
 	font-size: 2vb;
 	margin: 0;
 	padding-inline: 1.5rem;
 	padding-block: 1.5rem;
-	grid-column: 12;
-	grid-row: 1/8;
 }
+
 
 .diagram {
 	background: hsl(260 20% 10% / 0.95);
