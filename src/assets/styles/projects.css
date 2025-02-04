@@ -40,15 +40,13 @@ header > h1{
     width: 60%;
 }
 
-.menu {
+nav {
     display: none;
-    flex-direction: column;
     font-size: 4vb;
     background: hsl(260 20% 10% / 0.95);
-    margin: 1%;
-    padding-block: 15vb;
     transform: translateY(-50px); /* Slight vertical shift */
     animation: fadeInUp 1s ease-out forwards;
+    border-radius: 5%;
 }
 
 a {

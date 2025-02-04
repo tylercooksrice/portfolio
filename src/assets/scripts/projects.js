@@ -8,7 +8,7 @@ function init() {
 
     button.addEventListener("click", () => {
         if(visible == false) { // display the menu
-            grid.style.display = "none";
+            grid.style.display = "block";
             menu.style.display = "flex";
             visible = !visible;
 
