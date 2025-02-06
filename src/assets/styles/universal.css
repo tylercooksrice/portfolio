@@ -1,38 +1,81 @@
+:root {
+	--primary-universal-color: white;
+}
+
 @font-face { 
 	font-family: Poppin; 
 	src: url('../public/fonts/Poppins/Poppins-Thin.ttf'); 
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 } 
 
-body {
-	font-family: Poppin;
-    margin: 0;
-	padding: 0;
+@keyframes fadeInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Return to original position */
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* Matches the width of the text */
+    }
+}
+
+@keyframes blink {
+    50% {
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 600px) {
+	
+}
+
+body {
+	font-family: Poppin, sans-serif, Helvetica;
+	min-height: 100vh;
+    margin: 0%;
+	padding: 0%;
+	display: flex;
+    flex-direction: column;
 }
 
 a {
 	text-decoration: none;
 }
 
-footer {
-	position: static;
+footer {	
 	bottom: 0;
-	color: white;
+	margin-top: auto;
+	position: static;
+	width: auto;
+	color: var(--primary-universal-color);
 	background: hsl(260 20% 10% / 0.95);
     padding: 1rem; 
-	min-width: fit-content;
-}
-
-.grid-container {
-	display: flex;
 	flex-wrap: nowrap;
 }
 
-.grid-container > * {
+footer nav {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 1%;
+}
+
+footer nav a {
+	color: var(--primary-universal-color);
+	flex-wrap: nowrap;
 	text-align: center;
-	margin: 10px;
-	display: flex;
-	flex-wrap: nowrap;
-}
+	margin-right: 1%; 
+}	
