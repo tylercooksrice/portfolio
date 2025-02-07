@@ -2,6 +2,23 @@
 	--primary-color: #FAF9F6;
 }
 
+hgroup {
+	float: right;
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	margin: 0%;
+	grid-column: 8/12;
+	
+}
+
+hgroup > * {
+	font-size: 2.5vb;
+	white-space: nowrap;
+	margin: 0%;
+	padding-inline: 1.5rem;
+	padding-block: 1.5rem;
+}
+
 .grid {
 	display: grid;
 	min-block-size: 100vb;
@@ -38,7 +55,7 @@
 .intro > h1 {
 	margin: 0;
    	border-right: 2px solid transparent; /* To align with the cursor */
-    	overflow: hidden;
+    overflow: hidden;
 	width: 100%;
 	max-width: 35ch;
 	animation: typing 4s steps(35, end), blink 0.6s step-end infinite;
@@ -109,23 +126,6 @@ summary {
 	animation-delay: 5.5s;
 }
 
-hgroup {
-	display: grid;
-	grid-template-columns: repeat(4, auto);
-	margin: 0%;
-	grid-column: 8/12;
-	
-}
-
-hgroup > * {
-	font-size: 2.5vb;
-	white-space: nowrap;
-	margin: 0%;
-	padding-inline: 1.5rem;
-	padding-block: 1.5rem;
-}
-
-
 detail {
 	font-size: larger;
 	background: hsl(260 20% 10% / 0.95);
@@ -144,4 +144,37 @@ detail {
 
 a:hover {
     color: wheat;
-  }
+}
+
+@media screen and (max-width: 768px) {
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(11, 1fr);
+		grid-template-rows: repeat(9, auto);
+		grid-row-gap: 2rem;
+	}
+
+	.image {
+		inline-size: unset;
+		block-size: unset;
+		object-fit: cover;
+		object-position: top;
+		grid-column: 2 / 11; 
+		grid-row: 2 / 4;
+		place-self: stretch;
+		border-radius: 1rem;
+		margin-bottom: 50%;
+	}
+
+	detail {
+		visibility: none;
+	}
+
+	.intro {
+		grid-column: 2 / 11;
+	}
+
+	hgroup {
+		display: none;
+	}
+}
