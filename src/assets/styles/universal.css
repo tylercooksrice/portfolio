@@ -79,3 +79,7 @@ footer nav a {
 	text-align: center;
 	margin-right: 1%; 
 }	
+
+footer form {
+	float: right;
+}
