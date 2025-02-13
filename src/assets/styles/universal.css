@@ -34,9 +34,8 @@
 }
 
 @keyframes blink {
-    50% {
-        background-color: transparent;
-    }
+	from, to { border-color: transparent }
+  	50% { border-color: white; }
 }
 
 body {
