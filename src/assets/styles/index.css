@@ -55,7 +55,7 @@ main > h1:first-of-type {
 }
 
 div {
-	font-size: 2.8vh;
+	font-size: 2.75vh;
 	overflow: hidden; 
 	border-right: .15em solid white; 
 	white-space: nowrap; 
