@@ -1,3 +1,33 @@
-.grid {
-    
+
+header {
+    display: flex;
+}
+
+button {
+   order: 1;
+   margin-left: auto;
+   border-style: none;
+   background-color: transparent;
+   cursor: pointer;
+}
+
+header > nav {
+    visibility: hidden;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+	grid-template-rows: repeat(9, auto);
+	grid-row-gap: 2rem;
+}
+
+article {
+    font-family: Proxima-Nova, Poppin, sans-serif, Helvetica;
+    flex-direction: column;
+    display: flex;
+    background-color: var(--off-white);
+    border: solid;
+    grid-column: 2/8;
+    grid-row: 4;
 }

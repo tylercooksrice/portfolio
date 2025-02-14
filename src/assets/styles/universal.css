@@ -1,5 +1,6 @@
 :root {
 	--primary-universal-color: white;
+	--off-white: rgb(250, 249, 246);
 }
 
 @font-face { 
@@ -9,6 +10,14 @@
 	font-style: normal;
 	font-display: swap;
 } 
+
+@font-face {
+	font-family: Proxima-Nova; 
+	src: url('../public/fonts/Proxima%20Nova/proximanova_regular.ttf'); 
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
 
 @keyframes fadeInRight {
     to {

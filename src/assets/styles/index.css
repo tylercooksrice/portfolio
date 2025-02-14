@@ -19,25 +19,12 @@ hgroup > * {
 	padding-block: 1.5rem;
 }
 
-.grid {
+main {
 	display: grid;
 	min-block-size: 100vb;
 	grid-template-columns: repeat(11, 1fr);
 	grid-template-rows: repeat(9, auto);
 	grid-row-gap: 2rem;
-}
-
-.image {
-	inline-size: unset;
-	block-size: unset;
-	object-fit: cover;
-	object-position: top;
-	grid-column: 2 / 8;
-	grid-row: 2 / 4;
-	align-self: stretch;
-	justify-self: stretch;
-	place-self: stretch;
-	border-radius: 1rem;
 }
 
 main > h1:first-of-type {
@@ -54,8 +41,21 @@ main > h1:first-of-type {
 	
 }
 
+.image {
+	inline-size: unset;
+	block-size: unset;
+	object-fit: cover;
+	object-position: top;
+	grid-column: 2 / 8;
+	grid-row: 2 / 4;
+	align-self: stretch;
+	justify-self: stretch;
+	place-self: stretch;
+	border-radius: 1rem;
+}
+
 div {
-	font-size: 2.75vh;
+	font-size: 1.34vw;
 	overflow: hidden; 
 	border-right: .15em solid white; 
 	white-space: nowrap; 
