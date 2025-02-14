@@ -55,7 +55,7 @@ main > h1:first-of-type {
 }
 
 div {
-	font-size: 1.34vw;
+	font-size: 1.30vw;
 	overflow: hidden; 
 	border-right: .15em solid white; 
 	white-space: nowrap; 
@@ -183,7 +183,7 @@ a:hover {
 	}
 
 	detail {
-		visibility: none;
+		visibility: hidden;
 	}
 
 	.intro {
