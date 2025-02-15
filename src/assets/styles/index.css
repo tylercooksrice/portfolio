@@ -54,19 +54,18 @@ main > h1:first-of-type {
 	border-radius: 1rem;
 }
 
-div {
-	font-size: 1.30vw;
+span {
+	display: inline-block;
+	font-size: 1.47vw;
 	overflow: hidden; 
-	border-right: .15em solid white; 
+	border-right: .05em solid white; 
 	white-space: nowrap; 
-	margin: 0; 
-	padding: 0;
 	width: auto;
 	height: auto;
-	letter-spacing: .15em;
+	letter-spacing: .1em;
 	transform: scaleY(1.5);
 	animation: 
-		typing 4s steps(50, end),
+		typing 3.5s steps(40, end) forwards,
 		blink 1s 4.5s step-end infinite;	
 }
 
