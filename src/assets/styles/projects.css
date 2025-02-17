@@ -27,3 +27,31 @@ main {
 	grid-template-rows: repeat(9, auto);
 	grid-row-gap: 2rem;
 }
+
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 5dvh;
+    }
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Phone responsiveness */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    h1 {
+        font-size: 4dvh;
+    }
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 1rem;
+    }
+    button {
+        margin-left: 0;
+    }
+}
