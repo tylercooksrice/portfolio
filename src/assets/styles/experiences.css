@@ -1,9 +1,8 @@
-
 header {
     display: flex;
 
     h1 {
-        font-size: 7vh;
+        font-size: 7dvh;
         margin: 0;
         margin-left: 10px;
     }
@@ -41,7 +40,7 @@ article {
     grid-row: 3;
     scale: 0.2; 
     opacity: 0.1;
-    box-shadow: 100px 200px;
+    box-shadow: 100px 200px var(--cream-color);
     animation: scroll-animation linear forwards;
     animation-timeline: view();
     animation-range: entry 200px;

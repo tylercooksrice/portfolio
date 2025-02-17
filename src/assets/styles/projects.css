@@ -1,59 +1,29 @@
-#grid {
-	display: grid;
-	min-block-size: 100vb;
-	grid-template-columns: repeat(11, 1fr);
-	grid-template-rows: repeat(12, auto);
-	grid-row-gap: 2rem;
-}
 
 header {
-    display: grid;
+    display: flex;
+
+    h1 {
+        font-size: 7dvh;
+        margin: 0;
+        margin-left: 10px;
+    }
 }
 
-header > h1{
-    font-size: 5vb;
-    padding-inline: 1.5rem;
-    opacity: 0;
-    transform: translateY(-50px); /* Slight vertical shift */
-    animation: fadeInUp 1s ease-out forwards;
+button {
+   order: 1;
+   margin-left: auto;
+   border-style: none;
+   background-color: transparent;
+   cursor: pointer;
+}
+
+header > nav {
+    visibility: hidden;
 }
 
 main {
-    display: flexbox;
-}
-
-#menuButton {
-    grid-column: 11;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    height: 0;
-    margin-top: 1rem;
-    justify-self: end;
-    width: 20%;
-}
-
-#menuButton > img {
-    width: 60%;
-}
-
-.menu nav {
-    display: none;
-    font-size: 4vb;
-    background: hsl(260 20% 10% / 0.95);
-    transform: translateY(-50px); /* Slight vertical shift */
-    animation: fadeInUp 1s ease-out forwards;
-    border-radius: 5%;
-}
-
-a {
-    color: white;
-}
-
-a:hover {
-    color: wheat;
-  }
-
-h2 {
-    text-wrap: nowrap;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(9, auto);
+	grid-row-gap: 2rem;
 }

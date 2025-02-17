@@ -1,6 +1,7 @@
 :root {
 	--primary-universal-color: white;
 	--off-white: rgb(250, 249, 246);
+	--cream-color: color(display-p3 1.0 0.98 0.85);
 }
 
 @font-face { 
