@@ -142,6 +142,21 @@ article {
     article aside {
         display: none;
     }
+	footer {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: hsl(260 20% 10% / 0.95);
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    footer nav {
+        justify-content: space-around;
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 @media screen and (max-width: 480px) {
