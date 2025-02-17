@@ -47,6 +47,13 @@
   	50% { border-color: white; }
 }
 
+@keyframes scroll-animation {
+	to {
+		scale: 1; opacity: 1;
+		box-shadow: 0px 0px;
+	}
+}
+
 body {
 	font-family: Poppin, sans-serif, Helvetica;
 	min-height: 100vh;
