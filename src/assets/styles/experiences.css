@@ -142,8 +142,9 @@ article {
     article aside {
         display: none;
     }
-	footer {
-        width: 100%;
+	
+    footer {
+        width: 100vw;
         position: absolute;
         bottom: 0;
         left: 0;
