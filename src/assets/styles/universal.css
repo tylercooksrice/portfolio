@@ -104,19 +104,24 @@ footer form {
 		margin: 0%;
 		padding: 0%;
 		display: flex;
+		width: 100%;
     	flex-direction: column;
+		overflow-x: hidden;
 	}
 
-        footer {	
-	bottom: 0;
-	margin-top: auto;
-	position: static;
-	width: 100vw;
-	color: var(--primary-universal-color);
-	background: hsl(260 20% 10% / 0.95);
-    padding: 1rem; 
-	flex-wrap: nowrap;
+        footer {
+    width: 100vw; /* Ensure full width */
+    max-width: 100%; /* Prevent overflow */
+    position: relative; /* Keep it within the document flow */
+    left: 0; /* Align it to the left */
+    background: hsl(260, 20%, 10%, 0.95);
+    color: var(--primary-universal-color);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 
 	footer nav {
