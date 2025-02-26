@@ -2,6 +2,8 @@
 	--primary-universal-color: white;
 	--off-white: rgb(250, 249, 246);
 	--cream-color: color(display-p3 1.0 0.98 0.85);
+	--primary-color: #FAF9F6;
+	--dark-color: hsl(260 20% 10% / 0.95);
 }
 
 @font-face { 

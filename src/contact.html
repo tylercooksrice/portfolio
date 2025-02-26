@@ -20,15 +20,29 @@
         </nav>
     </header>
     <main>
-        <form action="/action_page.php" method="POST">
+        <form action="https://httpbin.org/post" method="POST">
+            <h1>Want to get in touch?</h1>
             <label for="firstName" >First Name:</label>
-            <input type="text" id="firstName" name="firstName" required placeholder="John" autofocus><br>
+            <input type="text" id="firstName" name="firstName" required placeholder="John" minlength="2" autofocus><br>
+            <output id="first-name-error"></output>
+            <output id="first-name-info"></output>
             <label for="lastName">Last Name:</label>
             <input type="text" id="lastName" name="lastName" required placeholder="Smith"><br>
+            <output id="last-name-error"></output>
+            <output id="last-name-info"></output>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required placeholder="example@example.com"><br>
+            <input type="email" id="email" name="email" required placeholder="example@example.com" minlength="6" ><br>
+            <output id="email-error"></output>
+            <output id="email-info"></output>
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required placeholder="(888)-888-8888" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">><br>
+            <input type="tel" id="phone" name="phone" required placeholder="888-888-8888" pattern="^(\(\d{3}\)[-\s]?\d{3}[-\s]?\d{4}|\d{3}[-\s]?\d{3}[-\s]?\d{4}|\d{9})$" minlength="6"required>
+            <output id="phone-error"></output>
+            <output id="phone-info"></output>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="5" cols="40" placeholder="Enter your comments here..."></textarea><br>
+            <output id="comments-error"></output>
+            <output id="comments-info"></output>
+            <input type="hidden" name="possible_bot" value="true">
             <button value="submit">Submit</button>
         </form> 
     </main>  
@@ -39,6 +53,7 @@
             <a href="experiences.html">Experience</a>
             <a href="contact.html">Contact Information</a>
         </nav>
+        <noscript>Javascript is currently disabled.</noscript>
         All rights reserved &copy;.
         <form action="submit.php" method="GET">
             <label for="languageOption">Language Option:</label>
