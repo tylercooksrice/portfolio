@@ -1,31 +1,133 @@
+
+header h1 {
+    font-size: xxx-large;
+}
+
 main {
     display: grid;
     grid-template-columns: repeat(11, 1fr);
-	grid-template-rows: repeat(7 , auto);
+	grid-template-rows: repeat(5 , auto);
 	grid-row-gap: 2rem;
+
+    picture {
+        grid-column: 3;
+        background-color: rgba(230, 220, 200, 1);
+    
+        aside {
+            text-align: center;
+
+            img {
+                width: 50px;
+                vertical-align: middle; 
+                display: inline-block; 
+            }
+
+            a:first-of-type img {
+                width: 70px;  
+            }
+
+
+            a:nth-child(3) img {
+                margin-right: 7px;
+            }
+
+            a:nth-child(4) img {
+                margin-right: 7px;
+            }
+        }
+
+        img {
+            background-color: transparent;
+            width: 400px;
+        }
+    }
 }
 
+main > aside {
+    grid-column: 7/10;
+    background-color: var(--dark-color);
+    color: white;
+
+    h1 {
+        font-size: xx-large;
+    }
+
+    p {
+        font-size: large;
+    }
+}
 
 main form {
-    grid-column: 7 / 10;
+    grid-column: 4 / 7;
     display: flex;
     flex-flow: column wrap;
     background-color: var(--dark-color);
     color: var(--primary-color, white);
     padding: 5%;
-    border-radius: 3%;
-}
 
-form {
     button {
-        margin: 0;
+        margin-left: 70%;
+        width: 30%;
     }
-}
 
-input:valid {
-    background-color: var(--primary-color, white);;
-}
+    input[type="text"] {
+        width: 60%;
+        border: none;
+        border-top: 3px solid transparent;
+        border-inline: 3px solid transparent;
+        border-bottom: 3px solid var(--cream-color);
+    }
 
-input:invalid {
-    background-color: var(--cream-color);
+    input[type="tel"] {
+        width: 30%;
+        border: none;
+        border-top: 3px solid transparent;
+        border-inline: 3px solid transparent;
+        border-bottom: 3px solid var(--cream-color);
+    }
+
+    input[type="email"] {
+        width: 70%;
+        border: none;
+        border-top: 3px solid transparent;
+        border-inline: 3px solid transparent;
+        border-bottom: 3px solid var(--cream-color);
+    }
+
+    input:valid {
+        background-color: var(--primary-color, white);
+    }
+    
+    input:invalid {
+        background-color: rgba(230, 220, 200, 1);   
+        border-top: 3px solid transparent;
+        border-inline: 3px solid transparent;
+        border-bottom: 3px dashed red;
+    }   
+
+    input:focus {
+        outline: none; 
+        border: 3px solid #555;
+    }
+
+    input:focus + output::after{
+        color: red;
+    }
+
+    input:invalid + output::after {
+        content: "This field is required";
+        visibility: visible;
+        color: red;
+        font-size: 0.9em;
+        display: inline;
+    }
+
+    input:valid + output::after {
+        content: "This field is required."; /* Keep the same content */
+        visibility: hidden;
+    }
+
+    textarea + output {
+        font-size: 0.9em;
+    }
 }

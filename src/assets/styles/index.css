@@ -46,6 +46,16 @@ main {
 		margin: 10%;
 	}
 
+	picture {
+		grid-column: 2 / 8;
+		grid-row: 2 / 4;
+
+		img {
+			border-radius: 1rem;
+			width: 100%; 
+		}
+	}
+
 	toggle {
 		font-size: x-large;
 		color: var(--primary-universal-color);
@@ -110,19 +120,7 @@ main {
 		  background-color: white;
 		  box-shadow: none;
 		}
-	  }
-
-.image {
-	inline-size: unset;
-	block-size: unset;
-	object-fit: cover;
-	object-position: top;
-	grid-column: 2 / 8;
-	grid-row: 2 / 4;
-	align-self: stretch;
-	justify-self: stretch;
-	place-self: stretch;
-	border-radius: 1rem;
+	}
 }
 
 h1 span {
@@ -201,7 +199,7 @@ summary {
 	display: block;
 	opacity: 0;
 	transform: translateX(-50px);
-    	animation: fadeInRight 1s ease-out forwards;
+    animation: fadeInRight 1s ease-out forwards;
 	animation-delay: 5.5s;
 }
 
