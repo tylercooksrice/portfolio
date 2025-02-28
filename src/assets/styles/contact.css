@@ -70,6 +70,11 @@ main form {
         width: 30%;
     }
 
+    button:hover {
+        background-color: #F2F2;
+        cursor: pointer;
+    }
+
     input[type="text"] {
         width: 60%;
         border: none;
