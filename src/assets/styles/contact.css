@@ -118,21 +118,20 @@ main form {
         border: 3px solid #555;
     }
 
-    input:focus + output::after{
-        color: red;
-    }
-
-    input:invalid + output::after {
-        content: "This field is required";
-        visibility: visible;
-        color: red;
-        font-size: 0.9em;
-        display: inline;
-    }
+/*Fix some basic functionality in case js does not work
+*/
 
     input:valid + output::after {
         content: "This field is required.";
         visibility: hidden;
+    }
+    
+    input:invalid + output::after {
+        
+        visibility: visible;
+        color: red;
+        font-size: 0.9em;
+        display: inline;
     }
 
     textarea + output {

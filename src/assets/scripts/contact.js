@@ -4,16 +4,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const lastName = document.getElementById("lastName");
   const phone = document.getElementById("phone");
   const comments = document.getElementById("comments");
-
-  email.addEventListener("input", (event) => {
-    const output = document.getElementById("email-error");
-    if(email.validity.valid) {
-      output.textContent = "This field is required.";
+  
+  firstName.addEventListener("input", (event) => {
+    const output = document.getElementById("first-name-error");
+    if(firstName.validity.valid) {
+      output.textContent = " ";
     } else {
       console.log("Invalid character detected!");
       output.textContent = "Invalid character detected";
       setTimeout(function (){
-        output.textContent = "";
+        output.textContent = "This field is required";
+      }, 3000);
+    }
+  })
+
+  email.addEventListener("input", (event) => {
+    const output = document.getElementById("email-error");
+    if(email.validity.valid) {
+      output.textContent = " ";
+    } else {
+      console.log("Invalid character detected!");
+      output.textContent = "Invalid character detected";
+      setTimeout(function (){
+        output.textContent = "This field is required";
       }, 3000);
     }
   })
