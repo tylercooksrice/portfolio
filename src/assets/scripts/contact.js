@@ -1,34 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contactForm');
-    const comments = document.getElementById('comments');
-    const charCount = document.getElementById('comments-info');
-    const formErrors = [];
+  const email = document.getElementById("email");
+  const firstName = document.getElementById("firstName");
+  const lastName = document.getElementById("lastName");
+  const phone = document.getElementById("phone");
+  const comments = document.getElementById("comments");
 
-    comments.addEventListener('input', () => {
-      const remaining = 200 - comments.value.length;
-      charCount.textContent = `${remaining} characters remaining`;
-      charCount.style.color = remaining <= 20 ? 'red' : 'black';
-    });
-
-    form.addEventListener('submit', (e) => {
-      formErrors.length = 0;
-
-      if (!form.checkValidity()) {
-        e.preventDefault();
-        const fields = ['firstName', 'lastName', 'email', 'phone'];
-        fields.forEach(field => {
-          const input = document.getElementById(field);
-          if (!input.checkValidity()) {
-            formErrors.push({ field, message: input.validationMessage });
-          }
-        });
-      }
-
-      document.getElementById('formErrors').value = JSON.stringify(formErrors);
-
-      if (formErrors.length > 0) {
-        alert('Form contains errors!');
-        console.log('Errors:', formErrors);
-      }
-    });
-  });
+  email.addEventListener("input", (event) => {
+    if(email.validity.valid) {
+      
+    } else {
+      
+    }
+  })
+})  
