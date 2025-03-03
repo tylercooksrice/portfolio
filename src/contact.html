@@ -6,81 +6,73 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="assets/styles/contact.css">
     <link rel="stylesheet" href="assets/styles/universal.css">
-    <script src="assests/scripts/contact.js"></script>
 </head>
 <body>
 
-    <header>
-        <h1>Contact Information</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <picture>
-            <source srcset="public/images/japan.jpg" media="(min-width: 1024px)">
-            <img src="" alt="A descriptive alt text">
-            <aside>
-                <h2>Socials</h2>
-                <a href="https://www.instagram.com/"><img src="public/images/instagram.webp"></a>
-                <a href="mailto:tylerkhuc96@gmail.com"><img src="public/images/phone.png"></a>
-                <a href=""><img src="public/images/email.webp"></a>                
-            </aside>
-        </picture>
-        <form action="https://httpbin.org/post" method="POST">
-            <h1>Want to get in touch?</h1>
-            <label for="firstName" >First Name:</label>
-            <input type="text" id="firstName" name="firstName" required placeholder="John" minlength="2" autofocus>
-            <output id="firstName"></output>
-            <output id="first-name-info"></output>
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required placeholder="Smith" required>
-            <output id="last-name-error"></output>
-            <output id="last-name-info"></output>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="example@example.com" minlength="6" required>
-            <output id="email-error"></output>
-            <output id="email-info"></output>
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required placeholder="888-888-8888" pattern="^(\(\d{3}\)[-\s]?\d{3}[-\s]?\d{4}|\d{3}[-\s]?\d{3}[-\s]?\d{4}|\d{9})$" minlength="6">
-            <output id="phone-error"></output>
-            <output id="phone-info"></output>
-            <label for="comments">Comments:</label>
-            <textarea id="comments" name="comments" rows="5" cols="40" placeholder="Enter your comments here..."></textarea>
-            <output id="comments-error">This field is optional</output><br>
-            <output id="comments-info"></output>
-            <input type="hidden" name="possible_bot" value="true">
-            <button value="submit">Submit</button>
-        </form> 
+<header>
+    <h1>Contact Information</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <picture>
+        <source srcset="public/images/japan.jpg" media="(min-width: 1024px)">
+        <img src="public/images/japan.jpg" alt="A descriptive alt text">
         <aside>
-            <h1>Contact Information:</h1>
-            <p>tylerkhuc96@gmail.com</p>
-            <h1></h1>
-            <p></p>
+            <h2>Socials</h2>
+            <a href="https://www.instagram.com/"><img src="public/images/instagram.webp" alt="Instagram"></a>
+            <a href="mailto:tylerkhuc96@gmail.com"><img src="public/images/phone.png" alt="Phone"></a>
+            <a href="#"><img src="public/images/email.webp" alt="Email"></a>
         </aside>
-    </main>  
-    <footer>
-        <nav>
-            <a href="index.html">Main</a>
-            <a href="projects.html">Projects</a>
-            <a href="experiences.html">Experience</a>
-            <a href="contact.html">Contact Information</a>
-        </nav>
-        <noscript>Javascript is currently disabled.</noscript>
-        All rights reserved &copy;.
-        <form action="submit.php" method="GET">
-            <label for="languageOption">Language Option:</label>
-            <select name="languages" id="languages" onChange="alert('hi');">
-                <option value="english">English</option>
-                <option value="spanish">Español</option>
-                <option value="japanese">日本語</option>
-                <option value="vietnamese">Tiếng Việt</option>
-            </select>
-        </form>
-    </footer>
+    </picture>
+    <form action="https://httpbin.org/post" method="POST" id="contactForm">
+        <h1>Want to get in touch?</h1>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required placeholder="John" minlength="2" autofocus>
+        <output id="first-name-info"></output>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required placeholder="Smith">
+        <output id="last-name-info"></output>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@example.com" minlength="6" required>
+        <output id="email-info"></output>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required placeholder="888-888-8888" pattern="^\(\d{3}\)[-\s]?\d{3}[-\s]?\d{4}|\d{3}[-\s]?\d{3}[-\s]?\d{4}|\d{9}$">
+        <output id="phone-info"></output>
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="5" cols="40" maxlength="200" placeholder="Enter your comments here..."></textarea>
+        <output id="comments-info">200 characters remaining</output>
+        <input type="hidden" name="form-errors" id="formErrors">
+        <button type="submit">Submit</button>
+    </form>
+    <aside>
+        <h1>Contact Information:</h1>
+        <p>tylerkhuc96@gmail.com</p>
+    </aside>
+</main>
+<footer>
+    <nav>
+        <a href="index.html">Main</a>
+        <a href="projects.html">Projects</a>
+        <a href="experiences.html">Experience</a>
+        <a href="contact.html">Contact Information</a>
+    </nav>
+    <noscript>Javascript is currently disabled.</noscript>
+    All rights reserved &copy;.
+    <form action="submit.php" method="GET">
+        <label for="languages">Language Option:</label>
+        <select name="languages" id="languages" onChange="alert('hi');">
+            <option value="english">English</option>
+            <option value="spanish">Español</option>
+            <option value="japanese">日本語</option>
+            <option value="vietnamese">Tiếng Việt</option>
+        </select>
+    </form>
+</footer>
 </body>
 </html>
