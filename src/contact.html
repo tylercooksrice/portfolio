@@ -33,21 +33,27 @@
     </picture>
     <form action="https://httpbin.org/post" method="POST" id="contactForm">
         <h1>Want to get in touch?</h1>
+
         <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required placeholder="John" pattern="[a-zA-Z]{2,}" autofocus>
-        <output id="first-name-error">This field is required</output>
+        <input type="text" title="Enter First Name" id="firstName" name="firstName" required placeholder="John" pattern="[a-zA-Z]{2,}" autofocus>
+        <output id="first-name-error"></output>
+
         <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required placeholder="Smith" pattern="[a-zA-Z]">
-        <output id="last-name-info">This field is required</output>
+        <input type="text" title="Enter Last Name" id="lastName" name="lastName" required placeholder="Smith" pattern="[a-zA-Z]+">
+        <output id="last-name-error"></output>
+
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="example@example.com" minlength="6" pattern="[a-zA-z0-9\-%_]+@[a-zA-Z0-9\-]+\.[a-z]{2,}$" required>
-        <output id="email-error">This field is required</output>
+        <input type="email" title="Enter Email" id="email" name="email" placeholder="example@example.com" minlength="6" pattern="[a-zA-z0-9\-%_]+@[a-zA-Z0-9\-]+\.[a-z]{2,}$" required>
+        <output id="email-error"></output>
+
         <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required placeholder="888-888-8888" pattern="^\(\d{3}\)[-\s]?\d{3}[-\s]?\d{4}|\d{3}[-\s]?\d{3}[-\s]?\d{4}|\d{9}$">
-        <output id="phone-info">This field is required</output>
+        <input type="tel" title="Enter Phone Number" id="phone" name="phone" required placeholder="888-888-8888" pattern="^\(\d{3}\)[-\s]?\d{3}[-\s]?\d{4}|\d{3}[-\s]?\d{3}[-\s]?\d{4}|\d{9}$">
+        <output id="phone-info"></output>
+
         <label for="comments">Comments:</label>
-        <textarea id="comments" name="comments" rows="5" cols="40" maxlength="200" placeholder="Enter your comments here..."></textarea>
+        <textarea id="comments" title="Enter Comments" name="comments" rows="5" cols="40" maxlength="200" placeholder="Enter your comments here..."></textarea>
         <output id="comments-info">200 characters remaining</output>
+
         <input type="hidden" name="form-errors" id="formErrors">
         <button type="submit">Submit</button>
     </form>

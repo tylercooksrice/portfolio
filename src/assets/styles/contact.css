@@ -121,18 +121,20 @@ main form {
 /*Fix some basic functionality in case js does not work
 */
 
-    input:valid + output::after {
-        content: "This field is required.";
-        visibility: hidden;
-    }
-    
-    input:invalid + output::after {
-        
-        visibility: visible;
-        color: red;
-        font-size: 0.9em;
-        display: inline;
-    }
+input:valid + output::after {
+    content: "This field is required."; /* Always keep content */
+    visibility: hidden; /* Hide text but keep space */
+    display: inline; /* Preserve natural text flow without collapse */
+}
+
+input:invalid + output::after {
+    content: "This field is required.";
+    visibility: visible; /* Show the message */
+    color: red;
+    font-size: 0.9em;
+    display: inline; /* Keep the flow consistent */
+}
+
 
     textarea + output {
         font-size: 0.9em;

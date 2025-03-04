@@ -8,12 +8,27 @@ document.addEventListener('DOMContentLoaded', () => {
   firstName.addEventListener("input", (event) => {
     const output = document.getElementById("first-name-error");
     if(firstName.validity.valid) {
-      output.textContent = " ";
+
     } else {
       console.log("Invalid character detected!");
-      output.textContent = "Invalid character detected";
+      firstName.setCustomValidity("Enter your first name!");
+
       setTimeout(function (){
-        output.textContent = "This field is required";
+
+      }, 3000);
+    }
+  })
+
+  lastName.addEventListener("input", (event) => {
+    const output = document.getElementById("last-name-error");
+    if(lastName.validity.valid) {
+
+    } else {
+      console.log("Invalid character detected!");
+      lastName.setCustomValidity("Enter your last name!");
+
+      setTimeout(function (){
+
       }, 3000);
     }
   })
@@ -21,12 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
   email.addEventListener("input", (event) => {
     const output = document.getElementById("email-error");
     if(email.validity.valid) {
-      output.textContent = " ";
+
     } else {
       console.log("Invalid character detected!");
-      output.textContent = "Invalid character detected";
+      email.setCustomValidity("Please enter a valid email address!");
+
       setTimeout(function (){
-        output.textContent = "This field is required";
+
       }, 3000);
     }
   })
