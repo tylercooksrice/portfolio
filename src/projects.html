@@ -1,82 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="assets/styles/projects.css">
-    <link rel="stylesheet" href="assets/styles/universal.css">
-    <script src="assets/scripts/projects.js"></script>
-</head>
-<body>
-    <header>
-        <h1>Project Portfolio</h1>
-        <button onClick="alert('hi');" type="button" id="menuButton">
-            <img src="public/images/navigation.png" alt="navigation" width="100px" height="100px"/>
-        </button>
-        <nav>
-            <a href="index.html">About Me</a>
-            <a href="projects.html">Projects</a>
-            <a href="experiences.html">Experiences</a>
-            <a href="contact.html">Contact Me</a>
-        </nav>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects</title>
+        <link rel="icon" type="image/x-icon" href="public/images/T-icon.png">
+        <link rel="stylesheet" href="assets/styles/projects.css">
+        <link rel="stylesheet" href="assets/styles/universal.css">
+        <script type="module" src="assets/scripts/projects.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Project Portfolio</h1>
+            <button onClick="alert('hi');" type="button" id="menuButton">
+                <img src="public/images/navigation.png" alt="navigation" width="100px" height="100px"/>
+            </button>
+            <header>        
+                <hgroup>
+                    <h1 class="home"><a href="index.html">About Me</a></h1>
+                    <h1 class="project"><a href="projects.html">Projects</a></h1>
+                    <h1 class="experience"><a href="experiences.html">Experiences</a></h1>
+                    <h1 class="contact"><a href="contact.html">Contact Me</a></h1>
+                </hgroup>
+            </header>
+        </header>
 
-    <main>
-        <section>
-            <h2>Upcoming:</h2>
-            <h3>UCSD Triangle Website</h3>
-        </section>
-        <section>
-            <h2>Ongoing:</h2>
-            <h3>Discord Bot</h3>
-            <a>TBD</a>
-        </section>
-        <section>
-            <h2>Finished:</h2>
-            <span>
-                <h3>Sentiment Analysis Model</h3>
-                <img src="public/images/BagOfWords.png">
-                <a>https://github.com/tylercooksrice/sentiment-analysis-model</a><br>
-                <detail>
-                    Predicting Using TF-IDF and Bag of Words (CountVectorizer) with Logistic Regression
+        <main>
+            <section>
+                <h2>Upcoming:</h2>
+                <h3>UCSD Triangle Website</h3>
+            </section>
+            <section>
+                <h2>Ongoing:</h2>
+                <h3>Discord Bot</h3>
+                <a>TBD</a>
+            </section>
+            <project-card></project-card>
+            <section>
+                <h2>Finished:</h2>
+                <span>
+                    <h3>Sentiment Analysis Model</h3>
+                    <img src="public/images/BagOfWords.png">
+                    <a>https://github.com/tylercooksrice/sentiment-analysis-model</a><br>
+                    <detail>
+                        Predicting Using TF-IDF and Bag of Words (CountVectorizer) with Logistic Regression
 
-                    This project performs a key analyses on Amazon Fine Foods Reviews: conducting sentiment analysis, 
-                    using two different models; TF-IDf and Bag of Words(CountVectorizer). The dataset, spanning from 1999 
-                    to 2012, contains over 500,000 reviews with features like product ID, user ID, helpfulness score, 
-                    and review text. For sentiment analysis, we used Logistic Regression with TF-IDF to classify reviews 
-                    as positive or negative based on the review text, achieving an accuracy of 87%. Compared to Bag of Words 
-                    (CountVectorizer), which achiewved an accuracy of 80%. bThe project demonstrates effective use of machine 
-                    learning models like Random Forest and Logistic Regression for text-based tasks, with optimizations to handle 
-                    large datasets and feature extraction and the postives and negatives of each respective model.
-                </detail>
-            </span>
-            <span>
-                <h3>Journal App</h3>
-                <a>https://github.com/cse110-sp24-group35/journal</a>
-                <detail>
-                    
-                </detail>
-            </span>
-        </section>
-    </main>
-    <footer>
-        <nav>
-            <a href="index.html">Main</a>
-            <a href="projects.html">Projects</a>
-            <a href="experiences.html">Experience</a>
-            <a href="contact.html">Contact Information</a>
-        </nav>
-        All rights reserved &copy;.
-        <form action="submit.php" method="GET">
-            <label for="languageOption">Language Option:</label>
-            <select name="languages" id="languages" onChange="">
-                <option value="english">English</option>
-                <option value="spanish">Español</option>
-                <option value="japanese">日本語</option>
-                <option value="vietnamese">Tiếng Việt</option>
-            </select>
-        </form>
-    </footer>
-</body>
+                        This project performs a key analyses on Amazon Fine Foods Reviews: conducting sentiment analysis, 
+                        using two different models; TF-IDf and Bag of Words(CountVectorizer). The dataset, spanning from 1999 
+                        to 2012, contains over 500,000 reviews with features like product ID, user ID, helpfulness score, 
+                        and review text. For sentiment analysis, we used Logistic Regression with TF-IDF to classify reviews 
+                        as positive or negative based on the review text, achieving an accuracy of 87%. Compared to Bag of Words 
+                        (CountVectorizer), which achiewved an accuracy of 80%. bThe project demonstrates effective use of machine 
+                        learning models like Random Forest and Logistic Regression for text-based tasks, with optimizations to handle 
+                        large datasets and feature extraction and the postives and negatives of each respective model.
+                    </detail>
+                </span>
+                <span>
+                    <h3>Journal App</h3>
+                    <a>https://github.com/cse110-sp24-group35/journal</a>
+                    <detail>
+                        
+                    </detail>
+                </span>
+            </section>
+        </main>
+        <footer>
+            <nav>
+                <a href="index.html">Main</a>
+                <a href="projects.html">Projects</a>
+                <a href="experiences.html">Experience</a>
+                <a href="contact.html">Contact Information</a>
+            </nav>
+            All rights reserved &copy;.
+            <form action="submit.php" method="GET">
+                <label for="languageOption">Language Option:</label>
+                <select name="languages" id="languages" onChange="">
+                    <option value="english">English</option>
+                    <option value="spanish">Español</option>
+                    <option value="japanese">日本語</option>
+                    <option value="vietnamese">Tiếng Việt</option>
+                </select>
+            </form>
+        </footer>
+    </body>
 </html>

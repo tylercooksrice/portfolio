@@ -1,19 +1,27 @@
- header {
+header {
     display: flex;
+    justify-content: space-between;
 
     h1 {
         font-size: 7dvh;
         margin: 0;
         margin-left: 10px;
     }
-}
 
+    hgroup {
+        float: right;
+        h1 {
+            font-size: 3vb;
+        }
+    }
+}
 button {
-   order: 1;
-   margin-left: auto;
-   border-style: none;
-   background-color: transparent;
-   cursor: pointer;
+    display: none;
+    order: 1;
+    margin-left: auto;
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 header > nav {

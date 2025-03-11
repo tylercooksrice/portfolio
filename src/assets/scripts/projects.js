@@ -1,4 +1,29 @@
-window.addEventListener("DOMContentLoaded", init);
+import { getMyComponentHTML } from './project-html.js';
+import { getMyComponentCSS } from './project-css.js';
+
+class ProjectCard extends HTMLElement {
+    constructor() {
+        super();
+    }
+
+    connectedCallback() {
+        
+        const style = document.createElement('style');
+        style.textContent = getMyComponentCSS();
+        const content = getMyComponentHTML();
+
+        this.innerHTML = '';
+        this.appendChild(style);
+        this.innerHTML += content;      
+        console.log("Added Successfully");
+    }
+}
+customElements.define('project-card', ProjectCard);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+})
 
 function init() {
     const grid = document.getElementById("grid");

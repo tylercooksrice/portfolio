@@ -6,6 +6,27 @@
 	--dark-color: hsl(260 20% 10% / 0.95);
 }
 
+hgroup {
+	float: right;
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	margin: 0%;	
+
+	h1 {
+		a:hover {
+			color: wheat;
+		}
+	}
+}
+
+hgroup > * {
+	font-size: 3vb;
+	white-space: nowrap;
+	margin: 0%;
+	padding-inline: 1.5rem;
+	padding-block: 1.5rem;
+}
+
 @font-face { 
 	font-family: Poppin; 
 	src: url('../public/fonts/Poppins/Poppins-Thin.ttf'); 
@@ -20,6 +41,11 @@
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
+}
+
+@keyframes background-dark {
+	0% {background-color: white;}
+	100% {background-color: var(--dark-color);}
 }
 
 @keyframes fadeInRight {
