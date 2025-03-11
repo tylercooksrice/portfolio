@@ -1,17 +1,17 @@
-export function getMyComponentHTML() {
+export function getMyComponentHTML(project) {
     return `
     <section>
-        <h2></h2>
+        <h2>${project.projectName}</h2>
         <span>
-            <h3>test</h3>
-            <picture></picture>
-            <a></a>
+            <h3>Project Details</h3>
+            <picture>
+                <img src="${project.picture}" alt="${project.projectName}">
+            </picture>
+            <a href="${project.link}" target="_blank">GitHub Repository</a>
             <detail>
-                testesttest
+                ${project.info}
             </detail>
         </span>
     </section>
     `;
 }
-
-//${currentDate}
