@@ -1,17 +1,15 @@
 export function getMyComponentHTML(project) {
     return `
-    <section>
-        <h2>${project.projectName}</h2>
-        <span>
-            <h3>Project Details</h3>
-            <picture>
-                <img src="${project.picture}" alt="${project.projectName}">
-            </picture>
-            <a href="${project.link}" target="_blank">GitHub Repository</a>
-            <detail>
-                ${project.info}
-            </detail>
-        </span>
-    </section>
+    <span>
+        <a href="${project.link}" target="_blank" title="Github Repository"><img src="public/images/github.png" id="github"></a>
+        <h3>${project.projectName}</h3>
+        <picture>
+            <img src="${project.picture}" alt="${project.projectName}" title="${project.caption}">
+        </picture>
+        
+        <detail>
+            ${project.info}
+        </detail>
+    </span>
     `;
 }

@@ -15,7 +15,7 @@ header {
         }
     }
 }
-button {
+#menuButton {
     display: none;
     order: 1;
     margin-left: auto;
@@ -31,8 +31,18 @@ header > nav {
 main {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;    
+
+    section {
+        margin: auto;
+        width: 70%;
+        height: 65vh;
+        background-color: gray;
+        display: flex;  
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 1%;
+    }
 }
 
 
