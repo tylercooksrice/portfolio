@@ -8,6 +8,7 @@ export function getMyComponentCSS() {
       padding: 2%;
       white-space: wrap;
       height: fit-content;
+      width: 50%;
 
       span {
         display: grid;
@@ -29,7 +30,7 @@ export function getMyComponentCSS() {
           margin: 0;
 
           img {
-            width: 50%;
+            width: 80%;
           }
         }
 
