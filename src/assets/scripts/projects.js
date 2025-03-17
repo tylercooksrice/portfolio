@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     htmlContent += getMyComponentHTML(project);
                 
             }
-            
     
             this.innerHTML = '';
             this.appendChild(style);
@@ -80,8 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     customElements.define('project-card', ProjectCard);
 });
-
-
 
 function init() {
     const grid = document.getElementById("grid");
