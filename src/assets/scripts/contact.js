@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       console.log("Invalid character detected!");
       firstName.setCustomValidity("Enter your first name!");
-
       setTimeout(function (){
 
       }, 3000);

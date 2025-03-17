@@ -2,7 +2,7 @@ const registerServiceWorker = async () => {
     if ("serviceWorker" in navigator) {
       try {
         const registration = await navigator.serviceWorker.register("/src/assets/scripts/sw.js", {
-          scope: "/src/assets/scripts/",
+          scope: "/",
         });
         if (registration.installing) {
           console.log("Service worker installing");
@@ -16,28 +16,31 @@ const registerServiceWorker = async () => {
       }
     }
   };
-  
-  
-  
+    
   registerServiceWorker();
 
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleSwitch = document.getElementsByTagName("toggle");
-    var currentTheme = "light";
-    currentTheme = localStorage.getItem("theme");
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleSwitch = document.getElementById("toggleSwitcher");
+    const toggleText = document.querySelector("toggle");
+    let currentTheme = localStorage.getItem("theme") || "light"; 
 
-    toggleSwitch.addEventListener("clicked", function(){
-        if(this.checked) {
+    if (currentTheme === "dark") {
+        document.body.classList.add("darkMode");
+        toggleSwitch.checked = true; 
+    } else {
+        document.body.classList.remove("darkMode");
+        toggleSwitch.checked = false;
+    }
+
+    toggleSwitch.addEventListener("change", function () {
+        if (this.checked) {
             localStorage.setItem("theme", "dark");
-            alert("test");
+            document.body.classList.add("darkMode");
+            toggleText.childNodes[0].nodeValue  = "Toggle Light Mode";
         } else {
             localStorage.setItem("theme", "light");
+            document.body.classList.remove("darkMode");
+            toggleText.childNodes[0].nodeValue  = "Toggle Dark Mode";
         }
     });
-
-    if(currentTheme === "dark") {
-        
-    } else if (currentTheme === "light") {
-
-    }
-})
+});
