@@ -36,7 +36,7 @@ const registerServiceWorker = async () => {
         if (this.checked) {
             localStorage.setItem("theme", "dark");
             document.body.classList.add("darkMode");
-            toggleText.childNodes[0].nodeValue  = "Toggle Light Mode";
+            toggleText.childNodes[0].nodeValue = "Toggle Light Mode";
         } else {
             localStorage.setItem("theme", "light");
             document.body.classList.remove("darkMode");

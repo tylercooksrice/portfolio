@@ -64,11 +64,13 @@ document.addEventListener('DOMContentLoaded', () => {
             style.textContent = getMyComponentCSS();
             let htmlContent = '';
             if (!remote) {
-                htmlContent += getMyComponentHTML(projectData[0]);
-            } else {
-
+                projectData.forEach(project => {
                     htmlContent += getMyComponentHTML(project);
-                
+                });
+            } else {
+                projectData.forEach(project => {
+                    remoteData += getMyComponentHTML(project);
+                });
             }
     
             this.innerHTML = '';
@@ -78,6 +80,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     customElements.define('project-card', ProjectCard);
+
+    document.getElementById('loadLocal').addEventListener('click', function() {
+
+        const projectCard = document.createElement('project-card');
+        document.getElementById('projectDisplay').appendChild(projectCard);
+    });
+
+    document.getElementById('loadRemote').addEventListener('click', function() {
+
+        const projectCard = document.createElement('project-card');
+        document.getElementById('projectDisplay').appendChild(projectCard);
+    });
 });
 
 function init() {
