@@ -1,0 +1,56 @@
+{
+    "name": "Personal Portfolio",
+    "start_url": "https://tylercooksrice.github.io/portfolio/src/",
+    "background_color": "#ffffff",
+    "theme_color": "#18141ff2",
+    "description": "This is my personal portfolio where I will be displaying my computer science technical skills and all the projects that I have completed.",
+    "icons": [
+        {
+            "src": "https://tylercooksrice.github.io/portfolio/src/public/images/github.png",
+            "size": "512px X 512px",
+            "type": "image/png"
+        },
+        {
+            "src": "https://tylercooksrice.github.io/portfolio/src/public/images/linkedin.png",
+            "size": "980px X 980px",
+            "type": "image/png"
+        },
+        {
+            "src": "https://tylercooksrice.github.io/portfolio/src/public/images/gmail.png",
+            "size": "686px X 512px",
+            "type": "image/png"
+        },
+        {
+            "src": "https://tylercooksrice.github.io/portfolio/src/public/images/instagram.webp",
+            "size": "400px X 400px",
+            "type": "image/webp"
+        },
+        {
+            "src": "https://tylercooksrice.github.io/portfolio/src/public/images/phone.png",
+            "size": "2000px X 2000px",
+            "type": "image/png"
+        },
+        {
+            "src": "https://tylercooksrice.github.io/portfolio/src/public/images/email.webp",
+            "size": "512px X 512px",
+            "type": "image/webp"
+        }
+    ],
+    "picture": [
+        {
+            "src": "https://tylercooksrice.github.io/portfolio/src/public/images/chicago.jpg",
+            "size": "4032px X 2391px",
+            "type": "image/jpg"
+        },
+        {
+            "src": "https://tylercooksrice.github.io/portfolio/src/public/images/BagOfWords.png",
+            "size": "661px X 380px",
+            "type": "image/png"
+        },
+        {
+            "src": "https://tylercooksrice.github.io/portfolio/src/public/images/japan.jpg",
+            "size": "661px X 380px",
+            "type": "image/png"
+        }
+    ]
+}

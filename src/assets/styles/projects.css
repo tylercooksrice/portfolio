@@ -39,6 +39,7 @@ main {
         height: 65vh;
         background-color: gray;
         display: flex;  
+        overflow-y: hidden;
         overflow-x: auto;
         white-space: nowrap;
         gap: 1%;
