@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="public/images/T-icon.png">
     <link rel="stylesheet" href="assets/styles/index.css">
     <link rel="stylesheet" href="assets/styles/universal.css">
-    <script src="assets/scripts/html.js"></script>
+    <script type="module" src="assets/scripts/index.js"></script>
 </head>
 <body>
-    <header>
-        <detail>Toggle Light Mode</detail>
-        <label>
-            <input type="checkbox" checked>
-            <span></span>
-        </label>
+    <header>        
         <hgroup>
             <h1 class="home"><a href="index.html">About Me</a></h1>
             <h1 class="project"><a href="projects.html">Projects</a></h1>
@@ -23,7 +19,11 @@
         </hgroup>
     </header>
     <main>
-        <img src="public/images/chicago.jpg" alt="beanChicago" class="image" />
+        <picture>
+            <source srcset="public/images/chicago.jpg" media="(min-width: 1024px)">
+            <img src="" alt="A descriptive alt text">
+        </picture>
+        
         <h1><span>Welcome to my Website Portfolio!</span></h1>
         <summary>
             Hi, I'm Tyler, a Computer Science student at the University of California, San Diego!
@@ -36,6 +36,13 @@
                 <li><a target="_blank" href="mailto:tylerkhuc96@gmail.com"><img class="gmail" src="public/images/gmail.png" alt="Instagram"/></a></li>
             </ul>
         </aside>
+        <toggle>
+            Toggle Dark Mode
+            <label>
+                <input type="checkbox" checked>
+                <span></span>
+            </label>
+        </toggle>
         <detail>
             Field of Study: Computer Science UCSD
         </detail>

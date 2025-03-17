@@ -1,20 +1,27 @@
-
 header {
     display: flex;
+    justify-content: space-between;
 
     h1 {
         font-size: 7dvh;
         margin: 0;
         margin-left: 10px;
     }
-}
 
-button {
-   order: 1;
-   margin-left: auto;
-   border-style: none;
-   background-color: transparent;
-   cursor: pointer;
+    hgroup {
+        float: right;
+        h1 {
+            font-size: 3vb;
+        }
+    }
+}
+#menuButton {
+    display: none;
+    order: 1;
+    margin-left: auto;
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 header > nav {
@@ -22,10 +29,20 @@ header > nav {
 }
 
 main {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-	grid-template-rows: repeat(9, auto);
-	grid-row-gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+
+    section {
+        margin: auto;
+        width: 70%;
+        height: 65vh;
+        background-color: gray;
+        display: flex;  
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 1%;
+    }
 }
 
 
@@ -38,7 +55,6 @@ main {
     }
 }
 
-/* Phone responsiveness */
 @media screen and (max-width: 768px) {
     header {
         flex-direction: column;

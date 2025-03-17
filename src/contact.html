@@ -1,54 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="assets/styles/contact.css">
-    <link rel="stylesheet" href="assets/styles/universal.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <link rel="icon" type="image/x-icon" href="public/images/T-icon.png">
+        <link rel="stylesheet" href="assets/styles/contact.css">
+        <link rel="stylesheet" href="assets/styles/universal.css">
+        <script src="assets/scripts/contact.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Contact Information</h1>   
+            <hgroup>
+                <h1 class="home"><a href="index.html">About Me</a></h1>
+                <h1 class="project"><a href="projects.html">Projects</a></h1>
+                <h1 class="experience"><a href="experiences.html">Experiences</a></h1>
+                <h1 class="contact"><a href="contact.html">Contact Me</a></h1>
+            </hgroup>
+        </header>
+        <main>
+            <picture>
+                <source srcset="public/images/japan.jpg" media="(min-width: 1024px)">
+                <img src="public/images/japan.jpg" alt="A descriptive alt text">
+                <aside>
+                    <h2>Socials</h2>
+                    <a href="https://www.instagram.com/"><img src="public/images/instagram.webp" alt="Instagram"></a>
+                    <a href="mailto:tylerkhuc96@gmail.com"><img src="public/images/phone.png" alt="Phone"></a>
+                    <a href="#"><img src="public/images/email.webp" alt="Email"></a>
+                </aside>
+            </picture>
+            <form action="https://httpbin.org/post" method="POST" id="contactForm">
+                <h1>Want to get in touch?</h1>
 
-    <header>
-        <h1>Contact Information</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <form action="/action_page.php" method="POST">
-            <label for="firstName" >First Name:</label>
-            <input type="text" id="firstName" name="firstName" required placeholder="John" autofocus><br>
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required placeholder="Smith"><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required placeholder="example@example.com"><br>
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required placeholder="(888)-888-8888" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">><br>
-            <button value="submit">Submit</button>
-        </form> 
-    </main>  
-    <footer>
-        <nav>
-            <a href="index.html">Main</a>
-            <a href="projects.html">Projects</a>
-            <a href="experiences.html">Experience</a>
-            <a href="contact.html">Contact Information</a>
-        </nav>
-        All rights reserved &copy;.
-        <form action="submit.php" method="GET">
-            <label for="languageOption">Language Option:</label>
-            <select name="languages" id="languages" onChange="alert('hi');">
-                <option value="english">English</option>
-                <option value="spanish">Español</option>
-                <option value="japanese">日本語</option>
-                <option value="vietnamese">Tiếng Việt</option>
-            </select>
-        </form>
-    </footer>
-</body>
+                <label for="firstName">First Name:</label>
+                <input type="text" title="Enter First Name" id="firstName" name="firstName" required placeholder="John" pattern="[a-zA-Z]{2,}" autofocus>
+                <output id="first-name-error"></output>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" title="Enter Last Name" id="lastName" name="lastName" required placeholder="Smith" pattern="[a-zA-Z]+">
+                <output id="last-name-error"></output>
+
+                <label for="email">Email:</label>
+                <input type="email" title="Enter Email" id="email" name="email" placeholder="example@example.com" minlength="6" pattern="[a-zA-z0-9\-%_]+@[a-zA-Z0-9\-]+\.[a-z]{2,}$" required>
+                <output id="email-error"></output>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" title="Enter Phone Number" id="phone" name="phone" required placeholder="888-888-8888" pattern="^\(\d{3}\)[-\s]?\d{3}[-\s]?\d{4}|\d{3}[-\s]?\d{3}[-\s]?\d{4}|\d{9}$">
+                <output id="phone-info"></output>
+
+                <label for="comments">Comments:</label>
+                <textarea id="comments" title="Enter Comments" name="comments" rows="5" cols="40" maxlength="200" placeholder="Enter your comments here..."></textarea>
+                <output id="comments-info">200 characters remaining</output>
+
+                <input type="hidden" name="form-errors" id="formErrors">
+                <button type="submit">Submit</button>
+            </form>
+            <aside>
+                <h1>Contact Me</h1>
+                <p>tylerkhuc96@gmail.com</p>
+            </aside>
+        </main>
+        <footer>
+            <nav>
+                <a href="index.html">Main</a>
+                <a href="projects.html">Projects</a>
+                <a href="experiences.html">Experience</a>
+                <a href="contact.html">Contact Information</a>
+            </nav>
+            <noscript>Javascript is currently disabled.</noscript>
+            All rights reserved &copy;.
+            <form action="submit.php" method="GET">
+                <label for="languages">Language Option:</label>
+                <select name="languages" id="languages" onChange="alert('hi');">
+                    <option value="english">English</option>
+                    <option value="spanish">Español</option>
+                    <option value="japanese">日本語</option>
+                    <option value="vietnamese">Tiếng Việt</option>
+                </select>
+            </form>
+        </footer>
+    </body>
 </html>
