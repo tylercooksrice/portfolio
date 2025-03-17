@@ -7,6 +7,7 @@ self.addEventListener('install', function (event) {
 	// Cache the offline.html page
 	event.waitUntil(caches.open('app').then(function (cache) {
 		cache.add(new Request('offline.html'));
+        console.log("success");
 		return cache;
 	}));
 
