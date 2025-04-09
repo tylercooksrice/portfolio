@@ -19,11 +19,26 @@ const registerServiceWorker = async () => {
     
   registerServiceWorker();
 
+  async function getTranslation() {
+    const response = await fetch("https://libretranslate.com/translate", {
+      method: "POST",
+      body: JSON.stringify({
+        q: "Ciao!",
+        source: "auto", 
+        target: "en",
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
+  
+    const translations = await response.json();
+    console.log(translations);
+  }
+ 
   document.addEventListener('DOMContentLoaded', () => {
     const toggleSwitch = document.getElementById("toggleSwitcher");
     const toggleText = document.querySelector("toggle");
     let currentTheme = localStorage.getItem("theme") || "light"; 
-
+    getTranslation();
     if (currentTheme === "dark") {
         document.body.classList.add("darkMode");
         toggleSwitch.checked = true; 
