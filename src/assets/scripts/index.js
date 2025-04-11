@@ -51,10 +51,12 @@ const registerServiceWorker = async () => {
         if (this.checked) {
             localStorage.setItem("theme", "dark");
             document.body.classList.add("darkMode");
+            document.body.style.animation = "background-dark 1.5s forwards";
             toggleText.childNodes[0].nodeValue = "Toggle Light Mode";
         } else {
             localStorage.setItem("theme", "light");
             document.body.classList.remove("darkMode");
+            document.body.style.animation = "background-light 1.5s forwards";
             toggleText.childNodes[0].nodeValue  = "Toggle Dark Mode";
         }
     });

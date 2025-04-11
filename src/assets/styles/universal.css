@@ -8,12 +8,10 @@
 
 .darkMode {
 	background-color: var(--dark-color);
-	animation: background-dark 1.5s;
 
 	a {
 		color: wheat;
 	}
-
 	a:hover {
 		 color: hsl(260 25% 10% / 0.95);
 	}
