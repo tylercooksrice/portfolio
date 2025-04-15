@@ -19,11 +19,26 @@ const registerServiceWorker = async () => {
     
   registerServiceWorker();
 
+  async function getTranslation() {
+    const response = await fetch("https://libretranslate.com/translate", {
+      method: "POST",
+      body: JSON.stringify({
+        q: "Ciao!",
+        source: "auto", 
+        target: "en",
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
+  
+    const translations = await response.json();
+    console.log(translations);
+  }
+ 
   document.addEventListener('DOMContentLoaded', () => {
     const toggleSwitch = document.getElementById("toggleSwitcher");
     const toggleText = document.querySelector("toggle");
     let currentTheme = localStorage.getItem("theme") || "light"; 
-
+    getTranslation();
     if (currentTheme === "dark") {
         document.body.classList.add("darkMode");
         toggleSwitch.checked = true; 
@@ -36,10 +51,12 @@ const registerServiceWorker = async () => {
         if (this.checked) {
             localStorage.setItem("theme", "dark");
             document.body.classList.add("darkMode");
-            toggleText.childNodes[0].nodeValue  = "Toggle Light Mode";
+            document.body.style.animation = "background-dark 1.5s forwards";
+            toggleText.childNodes[0].nodeValue = "Toggle Light Mode";
         } else {
             localStorage.setItem("theme", "light");
             document.body.classList.remove("darkMode");
+            document.body.style.animation = "background-light 1.5s forwards";
             toggleText.childNodes[0].nodeValue  = "Toggle Dark Mode";
         }
     });

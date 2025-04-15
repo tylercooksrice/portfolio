@@ -64,13 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
             style.textContent = getMyComponentCSS();
             let htmlContent = '';
             if (!remote) {
-                htmlContent += getMyComponentHTML(projectData[0]);
-            } else {
-
+                projectData.forEach(project => {
                     htmlContent += getMyComponentHTML(project);
-                
+                });z
+            } else {
+                projectData.forEach(project => {
+                    remoteData += getMyComponentHTML(project);
+                });
             }
-            
     
             this.innerHTML = '';
             this.appendChild(style);
@@ -80,8 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     customElements.define('project-card', ProjectCard);
 });
-
-
 
 function init() {
     const grid = document.getElementById("grid");
