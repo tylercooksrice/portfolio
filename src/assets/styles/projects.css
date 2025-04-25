@@ -32,12 +32,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;   
-    
-    .marqueeTrack  {
-        display: inline-flex;
-        animation: marquee-scroll 30s linear infinite;
-    }
-
     custom-marquee {
         margin: auto;
         width: 70%;
@@ -46,7 +40,11 @@ main {
         overflow-x: hidden;
         white-space: nowrap;
         gap: 1%;
-        
+    }
+
+    .marqueeTrack  {
+        display: inline-flex;
+        animation: marquee-scroll 30s linear infinite;
     }
 }
 
