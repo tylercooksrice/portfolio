@@ -46,4 +46,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })
 
+  comments.addEventListener("input", (event) => { 
+    const charCount = document.getElementById("comments-info");
+    let charCounter = comments.value.length;
+    console.log (charCounter);
+    if (charCounter >= 200 ) {
+      charCount.innerHTML = "Maximum Character reached(200 Characters)"; 
+      comments.readOnly = true;
+    } else {
+      charCount.innerHTML = `${200 - charCounter} characters remaining`; 
+      comments.disabled = false;
+    }
+  });
+
 })  
